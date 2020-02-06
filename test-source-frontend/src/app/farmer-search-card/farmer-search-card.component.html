@@ -1,0 +1,17 @@
+<form class="farmer-search-card-form" [formGroup]="options">
+    <table class="farmer-search-card-full-width" cellspacing="0">
+        <tr>
+            <td>
+                <mat-form-field class="farmer-search-card-full-width">
+                    <input matInput placeholder="Nome ou Doc#" formControlName="nameOrDocument">
+                </mat-form-field>
+            </td>
+            <td>
+                <button mat-mini-fab color="primary" (click)="search()">
+                    <mat-icon aria-hidden="false">search</mat-icon>
+                </button>
+            </td>
+        </tr>
+    </table>
+
+</form>

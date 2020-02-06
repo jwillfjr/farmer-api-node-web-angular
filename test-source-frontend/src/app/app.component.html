@@ -1,0 +1,24 @@
+<mat-card style="margin: 5%;">
+    <farmer-search-card [farmerSearchAbstractProvider]="farmerSearchService"
+        (onPartnerSelectedEvent)="loadFarmers($event)"></farmer-search-card>
+    <!-- <mat-divider style="width: 95%; margin-left: 16px;"></mat-divider> -->
+    <table class="example-full-width" cellspacing="0">
+        <tr *ngFor="let farmer of farmers" class="example-full-width" style="margin-top: 10px;">
+            <td>
+                <mat-form-field class="example-full-width">
+                    <input [(ngModel)]="farmer.name" matInput placeholder="Nome">
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="example-full-width">
+                    <input [(ngModel)]="farmer.document.documentNumber" matInput placeholder="Doc#">
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="example-full-width">
+                    <input [(ngModel)]="farmer.address.street" matInput placeholder="Endereço">
+                </mat-form-field>
+            </td>
+        </tr>
+    </table>
+</mat-card>
