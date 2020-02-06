@@ -16,7 +16,7 @@ export class FarmerSearchCardComponent implements OnInit {
 
     constructor(fb: FormBuilder) {
         this.options = fb.group({
-            nameOrDocument: ['',Validators.required]
+            nameOrDocument: ''
         });
     }
 
